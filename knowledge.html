@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>源 录</title>
+    <!--记录 来源于此-->
+    <link rel="shortcut icon" href="images/tab/4-2.png" type="image/x-icon" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #top {
+            position: absolute;
+            height: 40px;
+            background-color: #86cbbe; /*顶部颜色*/
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+        #top {
+            top: 0;
+            background: linear-gradient(to right, rgba(255,0,0,0),#86cbbe);
+        }
+        #bottom {
+            position: fixed;
+            height: 40px;
+            background-color: #86cbbe; /*底部颜色*/
+            opacity: 1;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+            #bottom p {
+                text-align: center;
+                height: 40px;
+                line-height: 40px;
+            }
+            #bottom a {
+                margin-right: 20px;
+                color: black;
+            }
+                #bottom a:hover {
+                    font-size: 20px;
+                    transition: all 0.5s;
+                }
+        #center {
+            margin-top: 40px;
+            top: 40px;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            overflow: auto;
+            background: linear-gradient(to right, rgba(255,0,0,0),#86cbbe);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        #top .s1 {
+            list-style: none;
+            position: relative;
+        }
+            #top .s1 li a {
+                width: 10%;
+                float: left;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                font-family: 'Arial Unicode MS';
+            }
+                #top .s1 li a:hover {
+                    font-size: 20px;
+                    background-color: #4fd1be;
+                    transition: all 0.2s;
+                }
+        #goutu, #sudu, #dj, #wb, #iso, #time, #phone {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        dl {
+            margin-top: 10px;
+            border-radius: 40px;
+            background-color: #ff7f00;
+            background: linear-gradient(to right,#86cbbe,#ff7f00);
+            opacity: 1;
+            width: 1250px;
+            height: 600px;
+        }
+            /*dl:hover {
+            background: linear-gradient(to right,#ff7f00,#ff7f00);
+            cursor:pointer;
+            }*/
+            dl dt {
+                padding:60px;
+                
+            }
+            dl dd {
+                color: black;
+                width:400px;
+                font-weight: bold;
+                font-size: 20px;
+                margin-top:-350px;
+                margin-left:800px;
+                line-height:40px;
+            }
+        #menu {
+            margin: 0 auto;
+            width: 1400px;
+        }
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0 auto;
+            width: 1400px;
+            margin-top: 10px;
+            margin-left: 420px;
+            margin-bottom: 40px;
+        }
+            ul.pagination li {
+                display: inline;
+            }
+                ul.pagination li a {
+                    color: black;
+                    float: left;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                    transition: background-color .3s;
+                    border: 1px solid #ff7f00;
+                    margin: 0 4px;
+                }
+                    ul.pagination li a.active {
+                        background-color: #ff7f00;
+                        color: white;
+                    }
+                    ul.pagination li a:hover:not(.active) {
+                        background-color: #ff7f00;
+                    }
+        #fix {
+            width: 120px;
+            background-color: #ccc;
+            position: fixed;
+            top: 200px;
+            left: 0px;
+        }
+            #fix ul li {
+                list-style: none;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+            }
+            #fix ul a {
+                color: black;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            #fix ul li:hover {
+                font-size: 25px;
+                transition: all 0.1s;
+                background-color: #ff7f00;
+            }
+            #fix ul li.title {
+                background-color: #ff7f00;
+            }
+    </style>
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#ss").click(function () {
+                var text = window.prompt("请输入要对我们说的话：");
+                if (text == "") {
+                    alert("你没有输入内容");
+                }
+                else {
+                    alert("谢谢反馈");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="top">
+            <ul class="s1">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="knowledge.html">摄影知识</a></li>
+                <li><a href="man.html">摄影名人</a></li>
+                <li><a href="txt.html">摄影名言</a></li>
+                <li id="ss"><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div id="center">
+            <div id="goutu">
+                <h2>
+                    <p>构图</p>
+                </h2>
+                <dl>
+                    <dt><a href="#"><img src="images/1.jpeg"/></a></dt>
+                    <dd>九宫格构图--在构图的时候，画面的横向和纵向平均分成三份，每一条线的交叉点我们将它称为”趣味中心“。我们在欣赏或者看一张照片时，眼睛最先注意到的地方就是”趣味中心“，所以在拍照的时候尽量将自己拍摄的主体安排在趣味中心。</dd>
+                </dl>
+                <dl>
+                    <dt><a href="#111"><img src="images/1-1.jpeg"/></a></dt>
+                    <dd>对角线构图--非常灵活，无论是风光摄影还是人像摄影，对角线构图都用的比较多。对角线构图能吸引观众的视线，牵引观众看完整个画面，同时也让画面灵活起来。</dd>
+                </dl>
+                <dl>
+                    <dt><a href="#111"><img src="images/1-3.jpeg"/></a></dt>
+                    <dd>居中构图--中心构图很简单，就是把主体放在画面的中间位置。虽然这种构图很呆板，毫无新意。但这种构图在拍建筑物或者体积较小的物体时却很好用，对于很多不会构图的新手来说，中心构图是最有保障的构图方法。</dd>
+                </dl>
+                <dl>
+                    <dt><a href="#111"><img src="images/1-4.jpeg"/></a></dt>
+                    <dd>框架式构图--框架式构图能创造遮挡感，有效集中观众视线，深受欢迎。 此外，观众还可以因此感受到摄影者的视点，从而有助于观者和摄影者对被摄场景产生共同体验。而框架构图并非只有利用窗户才行，生活中有很多可以利用物体。</dd>
+                </dl>
+            </div>
+            <div id="sudu">
+                <h2>
+                    <p>快门速度</p>
+                </h2>
+                <dl>
+                    <dt><a href="#sudu"><img src="images/num1.jpeg"/></a></dt>
+                    <dd style="margin-top:-500px;">快门速度表示光线照射图像感应器的时间长短。一般说来,光圈的大小决定了同样时间内能有多少光进入相机 ;而快门速度的多少则决定了传感器曝光多久。快门速度的快慢：分母越小，快门越慢，分母越大，快门越快。比如：快门速度为1/3秒，就是曝光三分之一秒的意思，这个曝光时间就很长。快门速度为1/200秒，就是曝光二百分之一秒的意思，这个曝光时间就很短了。</dd>
+                </dl>
+            </div>
+            <div id="dj">
+                <h2>
+                    <p>对焦</p>
+                </h2>
+                <dl>
+                    <dt><a href="#dj"><img src="images/s2.png" style="margin-top:100px;margin-left:100px;"/></a></dt>
+                    <dd style="margin-top:-200px;">对焦就是通过相机对焦系统变动物距和相距的位置，让被拍摄物体成像清晰的过程。</dd>
+                </dl>
+            </div>
+            <div id="wb">
+                <h2>
+                    <p>白平衡</p>
+                </h2>
+                <dl>
+                    <dt><a href="#wb"><img src="images/wb.jpg" style=""/></a></dt>
+                    <dd style="margin-top:-400px;margin-left:820px;">白平衡是描述显示器中红、绿、蓝三基色混合生成后白色精确度的一项指标,它是实现摄像机图像能精确反映被摄物的色彩状况</dd>
+                </dl>
+            </div>
+            <div id="iso">
+                <h2>
+                    <p>感光度</p>
+                </h2>
+                <dl>
+                    <dt><a href="#iso"><img src="images/iso.jpg" style="margin-left:100px;"/></a></dt>
+                    <dd style="margin-top:-400px;">感光度，又称为ISO值，是衡量底片对于光的灵敏程度。为了减少曝光时间，相对使用较高敏感度通常会导致影像质量降低。</dd>
+                </dl>
+            </div>
+            <div id="time">
+                <h2>
+                    <p>黄金时间</p>
+                </h2>
+                <dl>
+                    <dt><a href="#time"><img src="images/guang.jpeg" style=""/></a></dt>
+                    <dd style="margin-top:-400px;">经常有人问那个时间是拍照的最佳时机，其实并没有“最佳拍照时机”这个说法，因为一天之中任何时间都能拍出风格不同的照片。但是却存在“黄金拍照时间”这一说法，黄金拍照时间是指日出和日落前一小时。在这个时间太阳刚升起或者即将落下，此时的光线非常柔和，非常适合拍照。</dd>
+                </dl>
+            </div>
+            <div id="phone">
+                <h2>
+                    <p>手机摄影</p>
+                </h2>
+                <dl>
+                    <dt><a href="#phone"><img src="images/timg.jpg" style=""/></a></dt>
+                    <dd style="margin-top:-300px;">手机摄影，可打开照相机专业模式进行拍摄，调整参数会有惊喜的发现</dd>
+                </dl>
+            </div>
+            <div id="menu">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom">
+            <p>
+                更多链接：
+                <span><a href="http://www.poco.cn/" target="_blank">POCO摄影网</a></span>
+                <span><a href="https://www.vcg.com/" target="_blank">视觉中国</a></span>
+                <span><a href="http://pp.163.com/square" target="_blank">网易摄影</a></span>
+                <span><a href="http://www.dili360.com/" target="_blank">中国国家地理网</a></span>
+                <span><a href="https://tuchong.com/" target="_blank">图虫摄影社区</a></span>
+            </p>
+        </div>
+    </div>
+    <div id="fix">
+        <ul>
+            <li class="title">摄影知识</li>
+            <li><a href="#">构图</a></li>
+            <li><a href="#sudu">快门速度</a></li>
+            <li><a href="#dj">对焦</a></li>
+            <li><a href="#wb">白平衡</a></li>
+            <li><a href="#iso">感光度</a></li>
+            <li><a href="#time">黄金时间</a></li>
+            <li><a href="#phone">手机摄影</a></li>
+            <li><a href="#">返回顶部</a></li>
+        </ul>
+    </div>
+</body>
+</html>

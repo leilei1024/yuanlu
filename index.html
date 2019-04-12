@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>源 录</title>
+    <!--记录 来源于此（17应用2蔡磊）-->
+    <link rel="shortcut icon" href="images/tab/4-2.png" type="image/x-icon" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #top, #bottom {
+            position: absolute; /*上下的绝对定位*/
+            height: 40px;
+            background-color: #86cbbe; /*顶部底部颜色*/
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+        #top {
+            top: 0;
+            background: linear-gradient(to right, rgba(255,0,0,0),#86cbbe);
+        }
+        #bottom {
+            bottom: 0;
+        }
+            #bottom p {
+                text-align: center;
+                height: 40px;
+                line-height: 40px;
+            }
+            #bottom a {
+                margin-right: 20px;
+                color: black;
+            }
+                #bottom a:hover {
+                    font-size: 20px;
+                    transition: all 0.5s;
+                }
+        #center {
+            position: absolute;
+            top: 40px;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            overflow: auto;
+            background-image: url(images/s1-1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #top .s1 {
+            list-style: none;
+            position: relative;
+        }
+            #top .s1 li a {
+                width: 10%;
+                float: left;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                font-family: 'Arial Unicode MS';
+            }
+                #top .s1 li a:hover {
+                    font-size: 20px;
+                    background-color: #4fd1be;
+                    transition: all 0.2s;
+                }
+        #center input {
+            font-weight: bold;
+            font-size: 20px;
+            width: 600px;
+            height: 60px;
+            margin-top: 360px;
+            margin-left: 72px;
+            padding-left: 2em;
+            border-style: double;
+        }
+        #center button {
+            height: 60px;
+            width: 60px;
+            background-image: url(images/tab/4-2.png);
+            background-repeat: no-repeat;
+            background-size: 60px;
+            background-color:transparent;
+            border:none;
+            cursor:pointer;
+        }
+            #center button a {
+                text-decoration:none;
+            }
+    </style>
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script src="js/jquery.autocomplete.min.js"></script>
+    <link href="css/jquery.autocomplete.css" rel="stylesheet" />
+    <script>
+        $(function () {
+            $("#ss").click(function () {
+                var text = window.prompt("请输入要对我们说的话：");
+                if (text == "") {
+                    alert("你没有输入内容");
+                }
+                else {
+                    alert("谢谢反馈");
+                }
+            })
+            var names = ["感光度", "曝光", "白平衡", "色温", "ISO",
+                        "iso", "wb", "WB", "构图", "摄影知识",
+                        "摄影名人", "摄影名言", "Henri-Cartier-Bresson", " Robert Capa", "Ansel Adams",
+                        "Gary Winogrand", "Chase Jarvis", "Zack Arias' old stupid manager", "Mark Twain", "Ansel Adams",
+                        "哈尔斯曼", "Bruce Gilden", "Martin Parr", "Peter Adams", "POCO摄影网",
+                        "视觉中国", "网易摄影", "中国国家地理网", "图虫摄影社区", "朱恩光",
+                        "简庆福", "卡塞比尔", "焦距", "光圈", "景深",
+                        "快门速度", "对焦", "用光", "黄金时间", "白平衡",
+                        "白平衡", "白平衡", "白平衡", "白平衡", "白平衡"];
+            $("#txtName").autocomplete(names);
+
+            $("#button").click(function() {
+                var txt = document.getElementById("txtName").value;
+                alert("您搜索的是："+txt);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="top">
+            <ul class="s1">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="knowledge.html">摄影知识</a></li>
+                <li><a href="man.html">摄影名人</a></li>
+                <li><a href="txt.html">摄影名言</a></li>
+                <li id="ss"><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div id="center">
+            <input type="text" id="txtName" placeholder=" 搜 索 摄 影 知 识 , 记 录 美 好 生 活" />
+            <button id="button"><a href="#" target="_parent">...</a></button>
+        </div>
+        <div id="bottom">
+            <p>
+                更多链接：
+                <span><a href="http://www.poco.cn/" target="_blank">POCO摄影网</a></span>
+                <span><a href="https://www.vcg.com/" target="_blank">视觉中国</a></span>
+                <span><a href="http://pp.163.com/square" target="_blank">网易摄影</a></span>
+                <span><a href="http://www.dili360.com/" target="_blank">中国国家地理网</a></span>
+                <span><a href="https://tuchong.com/" target="_blank">图虫摄影社区</a></span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

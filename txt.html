@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>源 录</title>
+    <!--记录 来源于此-->
+    <link rel="shortcut icon" href="images/tab/4-2.png" type="image/x-icon" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #top {
+            position: fixed; /*上的绝对定位*/
+            height: 40px;
+            background-color: #86cbbe; /*顶部颜色*/
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+
+        #top {
+            top: 0;
+            background: linear-gradient(to right, rgba(255,0,0,0),#86cbbe);
+        }
+        #bottom {
+            position: fixed;
+            height: 40px;
+            background-color: #86cbbe; /*底部颜色*/
+            opacity: 1;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+            #bottom p {
+                text-align: center;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            #bottom a {
+                margin-right: 20px;
+                color: black;
+            }
+
+                #bottom a:hover {
+                    font-size: 20px;
+                    transition: all 0.5s;
+                }
+
+        #center {
+            margin-top: 40px;
+            top: 40px;
+            bottom: 40px;
+            height: 1920px;
+            left: 0;
+            right: 0;
+            overflow: auto;
+            background: linear-gradient(to right, rgba(255,0,0,0),#86cbbe);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #top .s1 {
+            list-style: none;
+            position: relative;
+        }
+
+            #top .s1 li a {
+                width: 10%;
+                float: left;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                font-family: 'Arial Unicode MS';
+            }
+
+                #top .s1 li a:hover {
+                    font-size: 20px;
+                    background-color: #4fd1be;
+                    transition: all 0.2s;
+                }
+
+        #list {
+            margin: 0 auto;
+            width: 1200px;
+        }
+
+        dl {
+            margin-top: 30px;
+            border-radius: 40px;
+            background-color: #ff7f00;
+            background: linear-gradient(to right,#86cbbe,#ff7f00);
+            opacity: 1;
+            width: 1200px;
+            height: 100px;
+        }
+
+            dl:hover {
+            background: linear-gradient(to right,#ff7f00,#ff7f00);
+            cursor:pointer;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            dl dd {
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                font-family: 'Arial Unicode MS';
+                margin-left: 100px;
+                line-height: 100px;
+            }
+        #menu {
+            margin: 0 auto;
+            width: 1400px;
+        }
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0 auto;
+            width: 1400px;
+            margin-top: 10px;
+            margin-left: 420px;
+        }
+            ul.pagination li {
+                display: inline;
+            }
+                ul.pagination li a {
+                    color: black;
+                    float: left;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                    transition: background-color .3s;
+                    border: 1px solid #ff7f00;
+                    margin: 0 4px;
+                }
+                    ul.pagination li a.active {
+                        background-color: #ff7f00;
+                        color: white;
+                    }
+                    ul.pagination li a:hover:not(.active) {
+                        background-color: #ff7f00;
+                    }
+    </style>
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#ss").click(function () {
+                var text = window.prompt("请输入要对我们说的话：");
+                if (text == "") {
+                    alert("你没有输入内容");
+                }
+                else {
+                    alert("谢谢反馈");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="top">
+            <ul class="s1">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="knowledge.html">摄影知识</a></li>
+                <li><a href="man.html">摄影名人</a></li>
+                <li><a href="txt.html">摄影名言</a></li>
+                <li id="ss"><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div id="center">
+            <div id="list">
+                <dl>
+                    <dd>1、你拍的前一万张照片都是烂的。  - Henri-Cartier-Bresson</dd>
+                </dl>
+                <dl>
+                    <dd>2、 如果你的照片不够好，表示你离得不够近。 - Robert Capa</dd>
+                </dl>
+                <dl>
+                    <dd>3. 摄影机最重要的元件是在它后方十二寸的那玩意儿。 - Ansel Adams</dd>
+                </dl>
+                <dl>
+                    <dd>4. 如果我透过观景窗看到某个我觉得熟悉的东西，我会试着去用不同的观点重新看一遍。  -Gary Winogrand</dd>
+                </dl>
+                <dl>
+                    <dd>5. 最好的相机就是你需要时在你身边的那台。  -Chase Jarvis</dd>
+                </dl>
+                <dl>
+                    <dd>6. 最好的相机是你忘在家里的那台。   -Zack Arias' old stupid manager</dd>
+                </dl>
+                <dl>
+                    <dd>7. 每个人都有机会拍出一张很棒的作品，我比较厉害是因为我拍出两张。  -David Bailey</dd>
+                </dl>
+                <dl>
+                    <dd>8. 当你的想像力无法集中时不能依赖你的眼睛。  -Mark Twain</dd>
+                </dl>
+                <dl>
+                    <dd>9. 一张好的照片是知道该在哪里等待。  -Ansel Adams</dd>
+                </dl>
+                <dl>
+                    <dd>10. 真正的摄影作品不需要言语去说明，而且它也无法用言语说明。  -Ansel Adams</dd>
+                </dl>
+                <dl>
+                    <dd>11. 对我来说最难的是肖像摄影。你必须要将摄影机放在一个人的皮肤与他的衣服之间。   -Henri-Cateir-Bresson</dd>
+                </dl>
+                <dl>
+                    <dd>12. 如果你在看照片的时候能闻到街头摄味道，那就是街头摄影。  -Bruce Gilden</dd>
+                </dl>
+                <dl>
+                    <dd>13. 所有照片都是种宣传。  -Martin Parr</dd>
+                </dl>
+                <dl>
+                    <dd>14. 好的照片在于情感的深度，而非景深。  -Peter Adams</dd>
+                </dl>
+            </div>
+            <div id="menu">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom">
+            <p>
+                更多链接：
+                <span><a href="http://www.poco.cn/" target="_blank">POCO摄影网</a></span>
+                <span><a href="https://www.vcg.com/" target="_blank">视觉中国</a></span>
+                <span><a href="http://pp.163.com/square" target="_blank">网易摄影</a></span>
+                <span><a href="http://www.dili360.com/" target="_blank">中国国家地理网</a></span>
+                <span><a href="https://tuchong.com/" target="_blank">图虫摄影社区</a></span>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
